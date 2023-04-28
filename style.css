@@ -1,0 +1,105 @@
+body {
+  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bodyWrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 10px;
+  padding-inline: 50px;
+}
+
+.logoWrapper {
+  width: 30px;
+}
+
+.logoWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style: none;
+}
+
+.list li {
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.list li:hover {
+  color: gray;
+}
+
+.active {
+  background: red;
+  color: gray;
+}
+
+.button {
+  background: red;
+  padding: 5px 15px;
+  border: 1px solid red;
+  outline: none;
+}
+
+.contentWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  background-image: url("./bmw.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.contentWrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: black;
+  opacity: 0.6;
+}
+
+.title {
+  font-size: 100px;
+  color: white;
+}
+
+.description {
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+}
